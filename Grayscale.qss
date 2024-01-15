@@ -231,11 +231,8 @@ qtractorTrackView {
 
 /* //// MIXER //// */
 qtractorMixerRackWidget {
-  background: qlineargradient(x1:1, y1:1, x2:0, y2:0,
-    stop:0 #2b2d32, /* Dark */
-    stop:0.5 #2b2d32
-    stop:1 #2b2d32 /* Light */
-  );
+  background: #111111;
+  border: 0px;
 }
 qtractorMixer qtractorMixerStrip:hover {
   background: qlineargradient(x1:0, y1:1, x2:0, y2:0,
@@ -249,9 +246,9 @@ qtractorMixerStrip QSlider::groove:horizontal {
   border-radius: 2px;
   height: 5px;
   background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-    stop:0 #000000,
-    stop:0.5  #000000,
-    stop:1 #000000
+    stop:0 #111111,
+    stop:0.5  #111111,
+    stop:1 #111111
   );
 }
 qtractorMixerStrip QSlider::handle:horizontal {
@@ -272,9 +269,9 @@ qtractorMixerStrip QSlider::groove:vertical {
   border-radius: 3px;
   width: 8px;
   background: qlineargradient(x1:0, y1:1, x2:0, y2:0,
-    stop:0 #000000,
-    stop:0.8  #222222,
-    stop:1 #222222
+    stop:0 #111111,
+    stop:0.8  #111111,
+    stop:1 #111111
   );
 }
 qtractorMixerStrip QSlider::handle:vertical {
@@ -301,7 +298,7 @@ qtractorMixerStrip QAbstractSpinBox {
   background: qlineargradient(x1:1, y1:1, x2:0, y2:0,
     stop:0 #222222, 
     stop:0.7 #222222,
-    stop:1 #000000,
+    stop:1 #111111,
   );
   border-radius: 4px;
   border: 2px inset #222222;
