@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 icons22=(
-    "fileNew"
-    "fileSave"
+    "clipEdit"
+    "clipNew"
+    "clipProperties"
     "editCopy"
     "editCut"
     "editDelete"
@@ -16,39 +17,9 @@ icons22=(
     "editSelectRange"
     "editSelectRect"
     "editUndo"
-    "clipNew"
-    "clipEdit"
-    "clipRecord"
-    "clipProperties"
-    "trackAudio"
-    "trackMidi"
-    "viewConnections"
-    "viewDrumMode"
-    "viewEvents"
-    "viewFiles"
-    "viewFileSystem"
-    "viewMesseges"
-    "viewMixer"
-    "viewPreview"
-    "viewZoomIn"
-    "viewZoomOut"
-    "viewZoomReset"
-    "viewZoomTool"
+    "fileNew"
+    "fileSave"
     "helpShortcuts"
-    "formSave"
-    "formRemove"
-    "formReject"
-    "formRefresh"
-    "formOpen"
-    "formEdit"
-    "formMoveUp"
-    "formMoveDown"
-    "formDisconnectAll"
-    "formDisconnect"
-    "formCreate"
-    "formConnect"
-    "formAdd"
-    "formAccept"
     "pluginEdit"
     "pluginProperties"
     "qtractorConnections"
@@ -56,10 +27,37 @@ icons22=(
     "qtractorMixer"
     "qtractorPlugin"
     "qtractorTracks"
+    "trackAudio"
+    "trackMidi"
+    "viewConnections"
+    "viewDrumMode"
+    "viewEvents"
+    "viewFileSystem"
+    "viewFiles"
+    "viewMessages"
+    "viewMixer"
+    "viewPreview"
+    "viewZoomIn"
+    "viewZoomOut"
+    "viewZoomReset"
+    "viewZoomTool"
     )
 
 icons16=(
-
+    "formAccept"
+    "formAdd"
+    "formConnect"
+    "formCreate"
+    "formDisconnect"
+    "formDisconnectAll"
+    "formEdit"
+    "formMoveDown"
+    "formMoveUp"
+    "formOpen"
+    "formRefresh"
+    "formReject"
+    "formRemove"
+    "formSave"
     "itemAudioClientIn"
     "itemAudioClientOut"
     "itemAudioFile"
@@ -67,7 +65,6 @@ icons16=(
     "itemAudioPortOut"
     "itemAudioPortPhysIn"
     "itemAudioPortPhysOut"
-    "itemBeat"
     "itemCdUp"
     "itemChannel"
     "itemClear"
@@ -82,7 +79,6 @@ icons16=(
     "itemMidiFile"
     "itemMidiPortIn"
     "itemMidiPortOut"
-    "itemNone"
     "itemNotes"
     "itemNrpns"
     "itemPatches"
@@ -92,12 +88,16 @@ icons16=(
     "itemSessionFile"
     )
 
-for icon in "${icons22[@]}"; do
-  cp clear-22x22.png "$icon".png
-done
+cp clear-8x16.png itemNone.png
+cp clear-8x16.png itemBeat.png
 
 for icon in "${icons16[@]}"; do
   cp clear-16x16.png "$icon".png
 done
+
+for icon in "${icons22[@]}"; do
+  cp clear-22x22.png "$icon".png
+done
+
 
 
