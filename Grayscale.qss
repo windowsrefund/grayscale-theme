@@ -175,15 +175,12 @@ qtractorMidiEditorForm #viewToolbar QWidget {
   padding:1px 0 0 0;
 }
 
-/* wtf is this? */
 qtractorMidiEditorForm #viewToolbar QComboBox {
   background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-    stop:0 #4f44f4,
-    stop:0.85  #4f44f4,
-    stop:0.9  #4f44f4,
-    stop:1 #4f44f4
+    stop:0 #2b2d32,
+    stop:1 #2b2d32
   );
-  color: #eeeeee;
+  color: #dddddd;
   width:75px;
   height:28px;
 }
