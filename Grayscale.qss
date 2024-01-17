@@ -8,57 +8,49 @@
 
 */
 
-/* //// BAR MENUS //// */
-qtractorMainForm,
-qtractorMidiEditorForm {
-    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
-    stop:0 #2b2d32, 
-    stop:1 #2b2d32
-  );
+/*
+qtractorMainForm {
+  background: #2b2d32;
 }
+*/
 
-#menuBar {
-  background:#2b2d32; /* Dark */
-  background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-    stop:0 #2b2d32,
-    stop:1 #2b2d32
-  );
-  border: 0;
-  padding: 5px 0;
-}
-
-#menuBar::item:selected {
- background: #555555; /* Top seleted menu item */
-}
-
-
-/* //// GENERAL COMBOXS //// */
+/* Combo box pulldowns */
 QComboBox:item {
+  background: #2b2d32;
   color: #dddddd;
 }
-#MessagesFontTextLabel {
-  background: #4b4b4b;
+
+QComboBox::item:selected {
+  background: #555555;
 }
 
 /* //// TOOL BARS //// */
 
-QToolBar{
-  border-top: 2px solid #2b2d32; /* Light */
-  border-bottom: 2px solid #2b2d32; /* Dark */
-  background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
-    stop:0 #2b2d32, /* Dark */
-    stop:1 #2b2d32  /* Light */
-  );
+#menuBar, QToolBar {
+  background: #2b2d32;
+  border: 0;
+  padding: 5px 0;
+}
+
+/* Top seleted menu item */
+#menuBar::item:selected {
+ background: #555555;
+}
+
+QToolBar {
+  border-top: 2px solid #2b2d32;
+  border-bottom: 2px solid #2b2d32;
   margin:0px;
   padding:4px
 }
+
 QToolBar::handle {
-  margin: 2px; 
-  background: rgba(125, 125, 125, 100);
+  margin: 2px;
+  background: #555555
 }
 QToolBar::handle:horizontal {
-width:5px;
-margin-right:10px;
+  width: 5px;
+  margin-right: 10px;
 }
 
 /* Toolbar > Separators */
@@ -79,21 +71,13 @@ qtractorMidiEditorForm #viewToolbar::separator {
   padding: 0 0 1px 0;
   border-radius: 4px;
   border:1px solid #2b2d32;
-  background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-    stop:0 #2b2d32,
-    stop:1 #2b2d32
-  );
+  background: #2b2d32;
 }
 #transportToolbar QWidget:hover {
-  background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-    stop:0 #555555,
-    stop:1 #555555);
+  background: #555555;
 }
 #transportToolbar QWidget:checked {
-  background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-    stop:0 #555555,
-    stop:1 #555555
-  );
+  background: #555555;
   border:1px solid #555555;
   width:36px;
   height:35px;
@@ -103,11 +87,8 @@ qtractorMidiEditorForm #viewToolbar::separator {
 
 /* Time Toolbar */
 #timeToolbar {
-  background: qlineargradient(x1:0, y1:1, x2:0, y2:0,
-     stop:0 #2b2d32
-     stop:1 #2b2d32
-  );
-  max-width: 380px;
+  background: #2b2d32;
+  max-width: 390px;
 }
 qtractorMidiEditorForm #timeToolbar {
   max-width: 290px;
@@ -150,11 +131,11 @@ qtractorMidiEditorForm #timeToolbar {
 /* We found the beat menu */
 #timeToolbar QComboBox {
   color: #dddddd;
-  background: #222222
+  background: #252628;
 }
 #timeToolbar QComboBox::item {
   color: #dddddd;
-  background: #222222;
+  background: #252628;
 }
 #timeToolbar QComboBox::item:selected {
   color: #dddddd;
@@ -164,39 +145,34 @@ qtractorMidiEditorForm #timeToolbar {
 /* The options toolbar */
 #optionsToolbar QWidget,
 qtractorMidiEditorForm #viewToolbar QWidget {
-  background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-    stop:0 #2b2d32,
-    stop:1 #2b2d32
-  );
+  background: #252628;
   border-radius: 2px;
-  border:1px solid #2b2d32;
+  border:1px solid #252628;
   width:26px;
   height:25px;
-  padding:1px 0 0 0;
+  padding:4px 0 0 0;
 }
 
+/* Beat menu in clip editor */
 qtractorMidiEditorForm #viewToolbar QComboBox {
-  background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-    stop:0 #2b2d32,
-    stop:1 #2b2d32
-  );
+  min-height: 32px;
+  background: #252628;
   color: #dddddd;
   width:75px;
-  height:28px;
+}
+qtractorMidiEditorForm #viewToolbar QComboBox::item {
+  background: #252628;
+}
+qtractorMidiEditorForm #viewToolbar QComboBox::item:selected {
+  background: #555555;
 }
 #optionsToolbar QWidget:hover,
 qtractorMidiEditorForm #viewToolbar QWidget:hover {
-  background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-    stop:0 #555555,
-    stop:1 #555555
-  );
+  background: #555555;
 }
 #optionsToolbar QWidget:checked,
 qtractorMidiEditorForm #viewToolbar QWidget:checked {
-  background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-    stop:0 #555555,
-    stop:1 #555555
-  );
+  background: #555555;
   border-radius: 2px;
   border:1px solid #555555;
   width:26px;
@@ -206,12 +182,16 @@ qtractorMidiEditorForm #viewToolbar QWidget:checked {
 
 
 /* //// SEQUENCER //// */
+
+/* left side */
 qtractorTrackList {
   border: 0;
   border-top: 2px solid #2b2d32; /* Light */
   border-left: 2px solid #2b2d32; /* Dark */
   border-bottom: 2px solid #2b2d32; /* Dark */
 }
+
+/* right side */
 qtractorTrackView {
   border: 0;
   border-top: 2px solid #2b2d32; /* Light */
@@ -330,11 +310,11 @@ qtractorMixerStrip QAbstractSpinBox::down-button:disabled {
 /* Plugins Boxs */
 qtractorPluginListView {
   border-radius: 2px;
-  border-top: 2px solid #202020; 
-  border-right: 2px solid #303030; 
-  border-bottom: 2px solid #303030; 
-  border-left: 2px solid #202020; 
-  background: #2f3032;
+  border-top: 2px solid #2b2d32; 
+  border-right: 2px solid #2b2d32; 
+  border-bottom: 2px solid #2b2d32; 
+  border-left: 2px solid #2b2d32; 
+  background: #2b2d32;
 }
 
 /* Scrolls */
