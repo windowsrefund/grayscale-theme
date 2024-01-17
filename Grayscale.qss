@@ -218,11 +218,13 @@ qtractorTrackView {
   border-right: 2px solid #2b2d32; /* Dark */
   border-bottom: 2px solid #2b2d32; /* Dark */
 }
+
+/* The time line */
 .qtractorTrackTime {
   border: 0;
-  border-top: 2px solid #2b2d32; /* Light */
-  border-right: 2px solid #2b2d32; /* Dark */
-  background: #202020; 
+  border-top: 2px solid #252628; /* Light */
+  border-right: 2px solid #252628; /* Dark */
+  background: #252628; 
 }
 
 
