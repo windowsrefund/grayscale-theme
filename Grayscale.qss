@@ -145,7 +145,7 @@ qtractorMidiEditorForm #timeToolbar {
 /* The Options toolbar in sequencer and View toolbar in MIDI editor */
 #optionsToolbar QWidget,
 qtractorMidiEditorForm #viewToolbar QWidget {
-  background: #2b2d32;
+  background: #252628;
   border-radius: 2px;
   border:1px solid #252628;
   width:26px;
@@ -156,7 +156,7 @@ qtractorMidiEditorForm #viewToolbar QWidget {
 /* Beat menu in clip editor */
 qtractorMidiEditorForm #viewToolbar QComboBox {
   min-height: 32px;
-  background: #2b2d32;
+  background: #252628;
   color: #dddddd;
   width:75px;
   padding:1px;
