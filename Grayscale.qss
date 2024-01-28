@@ -1,47 +1,38 @@
 /* QSS format file
 
  * Name: Grayscale.qss
- * Version: 0.1
+ * Version: 0.2
  * Credit: This is just a hack against the original work from Miguel Lacha
  * Description: Clean dullness
  * License: GNU General Public License V.2
 
 */
 
-/*
-qtractorMainForm {
-  background: #2b2d32;
-}
-*/
+/* //// BAR MENUS //// */
 
-/* Combo box pulldowns */
-QComboBox:item {
-  background: #2b2d32;
-  color: #dddddd;
+#menuBar {
+	color: #bbbbbb;
+	background: #2b2d32;
+	padding: 5px 0;
+	border: 0;
 }
-
-QComboBox::item:selected {
+QMenu{
+ background: #2b2d32;
+ border: 2px solid #2b2d32;
+}
+QMenu::item:selected {
   background: #555555;
 }
 
 /* //// TOOL BARS //// */
 
-#menuBar, QToolBar {
-  background: #2b2d32;
-  border: 0;
-  padding: 5px 0;
-}
-
-/* Top seleted menu item */
-#menuBar::item:selected {
- background: #555555;
-}
-
 QToolBar {
-  border-top: 2px solid #2b2d32;
-  border-bottom: 2px solid #2b2d32;
-  margin:0px;
-  padding:4px
+  background: #2b2d32;
+  min-height: 32px;
+  min-width: 32px;
+  border: 0;
+  spacing: 0;
+  padding: 2px;
 }
 
 QToolBar::handle {
@@ -94,11 +85,13 @@ qtractorMidiEditorForm #timeToolbar {
   max-width: 290px;
 }
 
+/*
 #timeToolbar QComboBox,
 #timeToolbar QAbstractSpinBox {
   min-height: 32px;
   padding:1px;
 }
+*/
 
 /* current time and tempo */
 #timeToolbar > QAbstractSpinBox {
@@ -158,8 +151,8 @@ qtractorMidiEditorForm #viewToolbar QComboBox {
   min-height: 32px;
   background: #252628;
   color: #dddddd;
-  width:75px;
-  padding:1px;
+  width: 75px;
+  padding: 1px;
 }
 qtractorMidiEditorForm #viewToolbar QComboBox::item {
   background: #252628;
@@ -167,6 +160,7 @@ qtractorMidiEditorForm #viewToolbar QComboBox::item {
 qtractorMidiEditorForm #viewToolbar QComboBox::item:selected {
   background: #555555;
 }
+
 #optionsToolbar QWidget:hover,
 qtractorMidiEditorForm #viewToolbar QWidget:hover {
   background: #555555;
@@ -200,19 +194,66 @@ qtractorTrackView {
   border-bottom: 2px solid #2b2d32; /* Dark */
 }
 
-/* The time line */
+
+/* //// SEQUENCER //// */
+/* The time line in the sequencer */
 .qtractorTrackTime {
   border: 0;
-  border-top: 2px solid #252628; /* Light */
-  border-right: 2px solid #252628; /* Dark */
+  border-top: 2px solid #252628;
+  border-right: 2px solid #252628;
   background: #252628; 
 }
 
+/* The time line in the MIDI editor */
+qtractorMidiEditTime {
+  border: 0;
+  border-top: 2px solid #252628;
+  border-right: 2px solid #252628;
+  background: #252628; 
+}
+
+/* //// GENERAL COMBOXS //// */
+QComboBox {
+  background: palette(dark);
+}
+QComboBox:item {
+  background: palette(dark);
+  color: #dddddd;
+}
+QComboBox::item:selected {
+  background: #555555;
+}
+
+/* //// BUTTONs //// */
+QPushButton:hover {
+  background: #555555;
+}
+
+/* //// TABS //// */
+QTabWidget, QTabWidget::pane, QTabWidget::tab-bar {
+  border: 0;
+}
+QTabWidget::pane {
+  border-top: 4px solid palette(midlight);
+}
+QTabBar::tab {
+ padding: 8px;
+ border: 4px solid rgba(0, 0, 0, 0);
+ border-top-left-radius: 8px;
+ border-top-right-radius: 8px;
+ background: palette(dark);
+}
+QTabBar::tab:!selected:hover {
+  background: #555555;
+}
+QTabBar::tab:selected {
+  border: 4px solid palette(midlight);
+  background: palette(window);
+}
 
 /* //// MIXER //// */
 qtractorMixerRackWidget {
-  background: #111111;
-  border: 0px;
+  background: palette(dark);
 }
 qtractorMixer qtractorMixerStrip:hover {
   background: qlineargradient(x1:0, y1:1, x2:0, y2:0,
