@@ -41,10 +41,6 @@ With Qtractor running, navigate to View > Options > Display. Import the Grayscal
 
 Next, import the Grayscale.qss file obtained from this repo in order to change the style sheet.
 
-Restart Qtractor and profit.
-
-### Bonus Configuration
-
 The suggested colors to set in View > Options > Display > Meters:
 
 - Audio is <span style='color: #55ff7f;'>#55FF7F</span>
@@ -54,3 +50,22 @@ The suggested track colors to set up and use:
 
 - Foreground is <span style='color: #252628;'>#252628</span>
 - Background is <span style='color: #878c6a;'>#878C6A</span>
+
+Optimize the main window:
+
+Disable the following toolbars using View > Toolbars
+
+- File
+- Edit
+- Track
+- View
+
+Optimize the MIDI clip editor:
+
+Disable the following toolbars using View > Toolbars
+
+- File
+- Edit
+- Transport
+- Time
+- Scale
