@@ -30,7 +30,7 @@ git clone https://github.com/windowsrefund/grayscale-theme.git
 git clone --recursive https://github.com/rncbc/qtractor.git
 cp grayscale-theme/images/*.png qtractor/src/images
 cd qtractor
-cmake -B build
+cmake -B build -D CONFIG_GRADIENT=0 -D CONFIG_NSM=0 -D CONFIG_XUNIQUE=0 -D CONFIG_STACKTRACE=0 -D CONFIG_VESTIGE=0
 cmake --build build
 sudo cmake --install build
 ```
