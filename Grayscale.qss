@@ -87,22 +87,14 @@ qtractorMidiEditorForm #timeToolbar {
   max-width: 290px;
 }
 
-/*
-#timeToolbar QComboBox,
-#timeToolbar QAbstractSpinBox {
-  min-height: 32px;
-  padding:1px;
-}
-*/
-
 /* current time and tempo */
 #timeToolbar > QAbstractSpinBox {
-  color: palette(text);
+  background: palette(dark);
+  color: #878c6a;
   font-family: monospace;
   font-weight: bold;
   min-height: 30px;
-  border-radius: 1px;
-  border: 1px palette(window);
+  border-radius: 9px;
 }
 
 #timeToolbar > QAbstractSpinBox::up-button {
@@ -175,30 +167,14 @@ qtractorMidiEditorForm #viewToolbar QWidget:checked {
 
 /* //// SEQUENCER //// */
 
-/* left side */
-qtractorTrackList {
-  border: 0;
-  border-top: 2px solid #2b2d32; /* Light */
-  border-left: 2px solid #2b2d32; /* Dark */
-  border-bottom: 2px solid #2b2d32; /* Dark */
-}
 
-/* right side */
-qtractorTrackView {
-  border: 0;
-  border-top: 2px solid #2b2d32; /* Light */
-  border-right: 2px solid #2b2d32; /* Dark */
-  border-bottom: 2px solid #2b2d32; /* Dark */
-}
-
-
-/* //// SEQUENCER //// */
 /* The time line in the sequencer */
 .qtractorTrackTime {
   border: 0;
   border-top: 2px solid #252628;
   border-right: 2px solid #252628;
-  background: #252628; 
+  background: palette(dark);
+  color: #878c6a;
 }
 
 /* The time line in the MIDI editor */
@@ -210,20 +186,23 @@ qtractorMidiEditTime {
 }
 
 /* //// GENERAL COMBOXS //// */
+
 QComboBox {
-  background: palette(window);
+  background: palette(base);
 }
+
 QComboBox:item {
-  background: palette(window);
-  color: #bbbbbb;
+  background: palette(base);
+  color: palette(text);
 }
+
 QComboBox::item:selected {
-  background: #555555;
+  background: palette(highlight);
 }
 
 /* //// BUTTONs //// */
 QPushButton:hover {
-  background: #555555;
+  background: palette(highlight);
 }
 
 /* //// TABS //// */
@@ -249,14 +228,20 @@ QTabBar::tab:selected {
 }
 
 /* //// MIXER //// */
+#qtractorMixer QAbstractSpinBox {
+  padding: 2px;
+  background: #111111;
+  color: #878c6a;
+}
+
 qtractorMixerRackWidget {
   background: palette(dark);
 }
 qtractorMixer qtractorMixerStrip:hover {
   background: qlineargradient(x1:0, y1:1, x2:0, y2:0,
-     stop:0 #2b2d32,
+     stop:0 palette(base),
      stop:0.9 #878c6a,
-     stop:1 #2b2d32
+     stop:1 #878c6a
   );
 }
 qtractorMixerStrip QSlider::groove:horizontal {
@@ -339,6 +324,7 @@ qtractorMixerStrip QAbstractSpinBox::down-button {
   height: 0;
 }
 
+/*
 qtractorMixerStrip QAbstractSpinBox::up-button:disabled,
 
 qtractorMixerStrip QAbstractSpinBox::down-button:disabled {
@@ -346,17 +332,18 @@ qtractorMixerStrip QAbstractSpinBox::down-button:disabled {
   image: url( );
   background: #202020;
 }
+*/
 
 /* //// ITEMS SELF DEFINED //// */
 
 /* Plugins Boxs */
 qtractorPluginListView {
   border-radius: 2px;
-  border-top: 2px solid #2b2d32; 
-  border-right: 2px solid #2b2d32; 
-  border-bottom: 2px solid #2b2d32; 
-  border-left: 2px solid #2b2d32; 
-  background: #2b2d32;
+  border-top: 2px solid palette(dark);
+  border-right: 2px solid palette(dark);
+  border-bottom: 2px solid palette(dark);
+  border-left: 2px solid palette(dark);
+  background: palette(dark);
 }
 
 /* Scrolls */
