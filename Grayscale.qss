@@ -5,23 +5,19 @@
  * Credit: This is just a hack against the original work from Miguel Lacha
  * Description: Clean dullness
  * License: GNU General Public License V.2
-
 */
 
 /* //// BAR MENUS //// */
 
 #menuBar {
-	color: palette(text);
-	background: palette(base);
+  background: palette(base);
 	padding: 5px 0;
 	border: 0;
 }
-
 QMenu {
- background: palette(base);
- border: 2px solid palette(base);
+  background: palette(base);
+  border: 2px;
 }
-
 QMenu::item:selected {
   background: palette(highlight);
 }
@@ -36,7 +32,6 @@ QToolBar {
   spacing: 0;
   padding: 2px;
 }
-
 QToolBar::handle {
   margin: 2px;
   background: palette(highlight);
@@ -45,7 +40,12 @@ QToolBar::handle:horizontal {
   width: 5px;
   margin-right: 10px;
 }
-
+QToolBar > QWidget:checked {
+  background: palette(highlight);
+}
+QToolBar > QWidget:hover {
+  background: palette(highlight);
+}
 /* Toolbar > Separators */
 #timeToolbar::separator,
 #transportToolbar::separator,
@@ -63,7 +63,7 @@ qtractorMidiEditorForm #viewToolbar::separator {
   margin:0;
   padding: 0 0 1px 0;
   border-radius: 4px;
-  border:1px solid palette(base);
+  border:1px;
   background: palette(base);
 }
 #transportToolbar QWidget:hover {
@@ -83,11 +83,11 @@ qtractorMidiEditorForm #viewToolbar::separator {
   background: palette(base);
   max-width: 390px;
 }
+
 qtractorMidiEditorForm #timeToolbar {
+  background: palette(base);
   max-width: 290px;
 }
-
-/* current time and tempo */
 #timeToolbar > QAbstractSpinBox {
   background: palette(dark);
   color: #878c6a;
@@ -96,29 +96,26 @@ qtractorMidiEditorForm #timeToolbar {
   min-height: 30px;
   border-radius: 9px;
 }
-
 #timeToolbar > QAbstractSpinBox::up-button {
   width: 0px;
   height: 0px;
 }
-
 #timeToolbar > QAbstractSpinBox::down-button {
   width: 0px;
   height: 0px;
 }
 #timeToolbar > QAbstractSpinBox::up-button:hover,
 #timeToolbar > QAbstractSpinBox::down-button:hover {
-  background: #222222;
+  background: palette(dark);
 }
 #timeToolbar > QAbstractSpinBox::up-button:pressed,
 #timeToolbar > QAbstractSpinBox::down-button:pressed {
-  background: #222222;
+  background: palette(dark);
 }
-
-/* We found the beat menu */
+/* the beat pulldown menu */
 #timeToolbar QComboBox {
-  color: palette(text);
   background: palette(base);
+  color: palette(text);
 }
 #timeToolbar QComboBox::item:selected {
   background: palette(highlight);
@@ -127,9 +124,8 @@ qtractorMidiEditorForm #timeToolbar {
 /* The Options toolbar in sequencer and View toolbar in MIDI editor */
 #optionsToolbar QWidget,
 qtractorMidiEditorForm #viewToolbar QWidget {
-  background: palette(base);
   border-radius: 2px;
-  border:1px solid palette(base);
+  border:1px; 
   width:26px;
   height:25px;
   padding:4px 0 0 0;
@@ -137,13 +133,7 @@ qtractorMidiEditorForm #viewToolbar QWidget {
 
 /* Beat menu in clip editor */
 qtractorMidiEditorForm #viewToolbar QComboBox {
-  background: palette(base);
-  color: palette(text);
   width: 75px;
-}
-
-qtractorMidiEditorForm #viewToolbar QComboBox::item {
-  background: palette(base);
 }
 
 qtractorMidiEditorForm #viewToolbar QComboBox::item:selected {
@@ -164,40 +154,19 @@ qtractorMidiEditorForm #viewToolbar QWidget:checked {
   padding:1px 0 0 0;
 }
 
-
 /* //// SEQUENCER //// */
 
-
 /* The time line in the sequencer */
-.qtractorTrackTime {
-  border: 0;
-  border-top: 2px solid #252628;
-  border-right: 2px solid #252628;
+qtractorTrackTime {
+  margin-top: 1px;
   background: palette(dark);
   color: #878c6a;
 }
 
 /* The time line in the MIDI editor */
 qtractorMidiEditTime {
-  border: 0;
-  border-top: 2px solid #252628;
-  border-right: 2px solid #252628;
-  background: #252628; 
-}
-
-/* //// GENERAL COMBOXS //// */
-
-QComboBox {
-  background: palette(base);
-}
-
-QComboBox:item {
-  background: palette(base);
-  color: palette(text);
-}
-
-QComboBox::item:selected {
-  background: palette(highlight);
+  background: palette(dark);
+  color: #878c6a;
 }
 
 /* //// BUTTONs //// */
@@ -217,23 +186,17 @@ QTabBar::tab {
  border: 4px solid rgba(0, 0, 0, 0);
  border-top-left-radius: 8px;
  border-top-right-radius: 8px;
- background: palette(window);
+ background: palette(dark);
 }
 QTabBar::tab:!selected:hover {
   background: palette(highlight);
 }
 QTabBar::tab:selected {
   border: 4px solid palette(highlight);
-  background: palette(highlight);
+  background: palette(window);
 }
 
 /* //// MIXER //// */
-#qtractorMixer QAbstractSpinBox {
-  padding: 2px;
-  background: #111111;
-  color: #878c6a;
-}
-
 qtractorMixerRackWidget {
   background: palette(dark);
 }
@@ -244,15 +207,25 @@ qtractorMixer qtractorMixerStrip:hover {
      stop:1 #878c6a
   );
 }
+qtractorMixerStrip > QWidget > QAbstractSpinBox {
+  background: palette(shadow);
+  font-family: monospace;
+  font-weight: bold;
+  color: #878c6a;
+  border-radius: 2px;
+  border: 2px solid palette(shadow);
+}
 qtractorMixerStrip QSlider::groove:horizontal {
-  border: 1px solid #111111;
+  border: 1px solid palette(shadow);
   border-radius: 2px;
   height: 5px;
-  background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-    stop:0 #111111,
-    stop:0.5  #111111,
-    stop:1 #111111
-  );
+  background: palette(shadow);
+}
+qtractorMixerStrip QSlider::groove:vertical {
+  border: 1px solid palette(shadow);
+  border-radius: 3px;
+  width: 8px;
+  background: palette(shadow);
 }
 qtractorMixerStrip QSlider::handle:horizontal {
   width:25px;
@@ -266,16 +239,6 @@ qtractorMixerStrip QSlider::handle:horizontal {
   border:2px outset #333333;
   border-radius: 4px;
   margin: -5px 0;
-}
-qtractorMixerStrip QSlider::groove:vertical {
-  border: 1px solid #111111;
-  border-radius: 3px;
-  width: 8px;
-  background: qlineargradient(x1:0, y1:1, x2:0, y2:0,
-    stop:0 #111111,
-    stop:0.8  #111111,
-    stop:1 #111111
-  );
 }
 qtractorMixerStrip QSlider::handle:vertical {
   height:30px;
@@ -294,76 +257,28 @@ qtractorMixerStrip QSlider::handle:disabled {
   background: #202020;
   border:2px outset #202020;
 }
-qtractorMixerStrip QAbstractSpinBox {
-  color: #bbbbbb;
-  font-weight: bold;
-  font-size:12px;
-  background: qlineargradient(x1:1, y1:1, x2:0, y2:0,
-    stop:0 #222222, 
-    stop:0.7 #222222,
-    stop:1 #111111,
-  );
-  border-radius: 4px;
-  border: 2px inset #222222;
-}
-qtractorMixerStrip QAbstractSpinBox:disabled {
+qtractorMixerStrip > QWidget > QAbstractSpinBox:disabled {
   color: #303030;
-  background: qlineargradient(x1:1, y1:1, x2:0, y2:0,
-    stop:0 #202020, 
-    stop:0.7 #101010,
-    stop:1 #303030
-  );
 }
-
-qtractorMixerStrip QAbstractSpinBox::up-button {
+qtractorMixerStrip > QWidget > QAbstractSpinBox::up-button {
   width: 0;
   height: 0;
 }
-qtractorMixerStrip QAbstractSpinBox::down-button {
+qtractorMixerStrip > QWidget > QAbstractSpinBox::down-button {
   width: 0;
   height: 0;
 }
-
-/*
-qtractorMixerStrip QAbstractSpinBox::up-button:disabled,
-
-qtractorMixerStrip QAbstractSpinBox::down-button:disabled {
-  border: 2px inset #222222;
-  image: url( );
-  background: #202020;
-}
-*/
 
 /* //// ITEMS SELF DEFINED //// */
 
 /* Plugins Boxs */
 qtractorPluginListView {
-  border-radius: 2px;
+  border-radius: 4px;
   border-top: 2px solid palette(dark);
   border-right: 2px solid palette(dark);
   border-bottom: 2px solid palette(dark);
   border-left: 2px solid palette(dark);
   background: palette(dark);
-}
-
-/* Scrolls */
-qtractorTracks QScrollBar:horizontal,
-qtractorMidiEditorForm QScrollBar:horizontal {
-  height: 16px;
-}
-qtractorTracks QScrollBar:vertical,
-qtractorMidiEditorForm QScrollBar:vertical {
-  width: 16px;
-}
-qtractorPluginListView QScrollBar:vertical {
-  width: 10px;
-}
-qtractorScrollView QToolButton {
-  min-height: 16px;
-  min-width: 16px;
-  max-height: 16px;
-  max-width: 16px;
-  border: none;
 }
 
 /* No scrollbars */
