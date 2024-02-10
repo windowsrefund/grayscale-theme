@@ -68,11 +68,6 @@ qtractorMidiEditorForm #viewToolbar::separator {
 }
 #transportToolbar QWidget:checked {
   background: palette(highlight);
-  border:1px solid palette(highlight);;
-  width:36px;
-  height:35px;
-  margin:0;
-  padding:1px 0 0 0;
 }
 
 #timeToolbar > QAbstractSpinBox {
