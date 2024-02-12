@@ -1,11 +1,17 @@
 /* QSS format file
 
  * Name: Grayscale.qss
- * Version: 0.2
+ * Version: 0.3
  * Credit: This is just a hack against the original work from Miguel Lacha
  * Description: Clean dullness
  * License: GNU General Public License V.2
 */
+
+/* // GENERAL hover // */
+QPushButton:hover, QToolButton:hover, QComboBox:hover, QTabBar::tab:!selected:hover {
+  border: 1px solid #878c6a;
+  background: solid palette(base);
+}
 
 /* //// BAR MENUS //// */
 
@@ -86,23 +92,19 @@ qtractorMidiEditorForm #viewToolbar::separator {
   width: 0px;
   height: 0px;
 }
-#timeToolbar > QAbstractSpinBox::up-button:hover,
-#timeToolbar > QAbstractSpinBox::down-button:hover {
-  background: palette(dark);
-}
-#timeToolbar > QAbstractSpinBox::up-button:pressed,
-#timeToolbar > QAbstractSpinBox::down-button:pressed {
-  background: palette(dark);
-}
 
-#optionsToolbar QWidget:checked,
-qtractorMidiEditorForm #viewToolbar QWidget:checked {
-  background: solid palette(highlight);
+/* Options Toolbars */
+#optionsToolbar QWidget, 
+qtractorMidiEditorForm #viewToolbar QWidget {
   border-radius: 2px;
-  border:1px solid palette(highlight);
-  width:26px;
-  height:25px;
-  padding:1px 0 0 0;
+  border: 1px;
+  width 25px;
+  height 26px;
+  padding: 0 0 2px 0;
+}
+#optionsToolbar QWidget:hover,
+qtractorMidiEditorForm #viewToolbar QWidget:hover { 
+  background: solid palette(highlight);
 }
 
 /* //// SEQUENCER //// */
@@ -118,13 +120,6 @@ qtractorTrackTime {
 qtractorMidiEditTime {
   background: palette(dark);
   color: #878c6a;
-}
-
-/* // GENERAL :hover // */
-#optionsToolbar QWidget:hover,
-qtractorMidiEditorForm #viewToolbar QWidget:hover,
-QPushButton:hover, QToolButton:hover, QComboBox:hover, QTabBar::tab:!selected:hover {
-  border: 1px solid #878c6a;
 }
 
 /* //// TABS //// */
