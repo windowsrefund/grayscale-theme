@@ -131,7 +131,8 @@ Here are the suggested bindings for the MIDI Clip Editor (Piano Roll) window:
 | viewSnapPerBeat1        |    1    |                                                      |
 | viewSnapPerBeat2        |    2    |                                                      |
 | viewSnapPerBeat3        |    3    |                                                      |
-| viewSnapPerBeat4        |    4    | Recently added. Maybe I'll move this to R by itself. |
+| viewSnapPerBeat4        |    4    |                                                      |
+| viewZoomResetAction     | Shift+R | Newly added. I may remap this to R                   |
 
 ### The Perfect i3 Configuration
 
