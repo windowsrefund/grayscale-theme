@@ -156,3 +156,7 @@ for_window [class="(?i)Qtractor" title="\.qtr"] floating disable
 assign [class="(?i)Qtractor" title="Mixer"] $ws4
 assign [class="(?i)Qtractor"] $ws3
 ```
+
+# Extras
+
+- _ShowMIDI-grayscale.svg_ theme file for the very cool [ShowMIDI](https://github.com/gbevin/ShowMIDI) plugin.
