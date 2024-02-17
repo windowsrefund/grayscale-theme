@@ -73,13 +73,13 @@ In the MIDI clip editor (piano roll), navigate to _View > Toolbars_ and disable 
 
 Disclaimer: I use a tiling window manager which handles some areas of my DAW-related work flow. That said, the following bindings are specific to Qtractor itself and I'd have to imagine the approach offered would benefit anyone regardless of their particular approach to window management.
 
-All keybindings listed below are purposefully intended to be used with one hand. This is the secret sauce to being highly productive when using an application that does justify continuous usage of the rodent. When we bind our most common operations to the hand not driving the mouse, we can avoid moving the other hand back and forth. In general, one hand (mostly) navigates and the other (mostly) operates. The focus is on streamlining the stuff we do every day. We're not trying to capture every possible scenario. As patterns become more common, we'll consider extending our mappings as needed.
+All keybindings listed below are purposefully intended to be used with one hand. This is the secret sauce to being highly productive when using an application that does justify continuous usage of the rodent. When we bind our most common operations to the hand not driving the mouse, we can avoid moving the other hand back and forth. In general, one hand (mostly) navigates and the other (mostly) operates. The focus is on streamlining the stuff we do every day. We can use the menu system for the infrequently used operations as we are not trying to bind to every possible scenario. As usage patterns become more common, we'll consider extending our bindings accordingly.
 
-Also worth mentioning is the fact I only work with _Select Mode_ set to _clip_. I see no reason to ever work in any other mode aside from when working with Automation. This explains the mappings of _A_ and _Shift-A_ below.
+Also worth mentioning is the fact I only work with _Select Mode_ set to _clip_. In fact, I see no reason to ever work in any other mode aside from the occasional toggle to _Automation_ mode (and then back). This explains the _A_ and _Shift-A_ bindings shown below.
 
 Keybindings in Qtractor are maintained in two distinct work areas; the main window and the MIDI clip editor. This means a given binding may exist in both while performing completely different operations. This is perfect and we do thank Rui for this brilliant design!
 
-Although many reasonable defaults are provided "out of the box", I have personally chosen to just delete them and suggest you do the same. In other words, only map what you intend to actually use.
+Although many reasonable defaults are provided "out of the box", I have personally chosen to just delete them and suggest you do the same. In other words, only bind what you intend to actually use.
 
 Here are the suggested bindings for the main window:
 
