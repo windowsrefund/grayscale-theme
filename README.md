@@ -20,7 +20,7 @@ Everything in this design is geared toward functionality:
 - A minimal set of colors are used in order to keep the focus on the data itself rather than the interface.
 - Only icons providing value on their own have been maintained.
 
-### Installation
+# Installation
 
 Given the need to overwrite images, we will compile. This assumes you are running some Debian-like distro. The following steps have been verified on Ubuntu 23.10:
 
@@ -38,7 +38,7 @@ Given the need to overwrite images, we will compile. This assumes you are runnin
   sudo cmake --install build
 ```
 
-### Additional Color Setup
+# Additional Color Setup
 
 With Qtractor running, navigate to _View > Options > Display_.
 
@@ -52,7 +52,7 @@ The suggested colors to use when creating tracks are _#252628_ for foreground an
 
 The suggested color to use for automation is _#bdbdbd_.
 
-### Toolbar Configuration
+# Toolbar Configuration
 
 In order to reduce clutter, it is highly recommended to disable most toolbars. In the main window, navigate to _View > Toolbars_ and disable the following:
 
@@ -69,7 +69,7 @@ In the MIDI clip editor (piano roll), navigate to _View > Toolbars_ and disable 
 - Time
 - Scale
 
-### Key Bindings
+# Key Bindings
 
 Disclaimer: I use a tiling window manager which handles some areas of my DAW-related work flow. That said, the following bindings are specific to Qtractor itself and I'd have to imagine the approach offered would benefit anyone regardless of their particular approach to window management.
 
@@ -134,7 +134,7 @@ Here are the suggested bindings for the MIDI Clip Editor (Piano Roll) window:
 | viewSnapPerBeat4        |    4    |                                                      |
 | viewZoomResetAction     | Shift+R | Newly added. I may remap this to R                   |
 
-### The Perfect i3 Configuration
+# The Perfect i3 Configuration
 
 In the event you are using i3, here are the bits of my configuration:
 
@@ -155,7 +155,4 @@ for_window [class="(?i)Qtractor" title="\.qtr"] floating disable
 # DAW on the left, mixer on the right
 assign [class="(?i)Qtractor" title="Mixer"] $ws4
 assign [class="(?i)Qtractor"] $ws3
-
-
-
 ```
