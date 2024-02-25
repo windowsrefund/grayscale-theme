@@ -99,6 +99,7 @@ Here are the suggested bindings for the main window
 | fileCloseAction           |    X    | Heavily used binding most often used to close Piano Roll window                |
 | transportBackwardAction   |    B    | Heavily used to navigate back across the timeline to a given marker or head    |
 | transportForwardAction    |    F    | Heavily used to navigate forward across the timeline to a given marker or head |
+| transportLoopSetAction    | Shift+R | Set Loop range after moving Loop-start and/or Loop-end marker(s)               |
 | transportPlayAction       |  Space  |                                                                                |
 | viewMenubarAction         | Ctrl+M  | Keep this around just in case the Menu Bar is accidently closed!               |
 | viewSnapPerBeat1          |    1    | Quarter note                                                                   |
