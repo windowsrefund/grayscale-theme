@@ -43,6 +43,9 @@ QGroupBox::title {
 #menuBar QMenu::item:disabled {
   color: palette(highlight);
 }
+#menuBar QMenu::icon:checked {
+  background: palette(highlight);
+}
 
 /* Section: Tool Bars */
 QToolBar {
