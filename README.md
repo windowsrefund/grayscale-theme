@@ -81,7 +81,7 @@ Keybindings in Qtractor are maintained in two distinct work areas; the main wind
 
 Although many reasonable defaults are provided "out of the box", I have personally chosen to just delete them and suggest you do the same. In other words, only bind what you intend to actually use.
 
-Here are the suggested bindings for the main window:
+Here are the suggested bindings for the main window
 
 | Menu/Action               | Binding | Mnemonic or additional notes                                                   |
 | :------------------------ | :-----: | :----------------------------------------------------------------------------- |
@@ -89,50 +89,51 @@ Here are the suggested bindings for the main window:
 | clipMergeAction           |    G    | Group                                                                          |
 | clipSplitAction           |    S    | Split                                                                          |
 | clipUnlinkAction          |    T    | Tear (not really but I just thought of it)                                     |
-| editCopyAction            |    C    |                                                                                |
-| editDeleteAction          |    D    |                                                                                |
-| editPasteAction           |    V    |                                                                                |
-| editRedoAction            | Ctrl+R  |                                                                                |
-| editSelectModeClipAction  | Shift+A | Opposite of A (see below)                                                      |
+| editCopyAction            |    C    | Copy                                                                           |
+| editDeleteAction          |    D    | Delete                                                                         |
+| editPasteAction           |    V    | Paste                                                                          |
+| editRedoAction            | Shift-Z | Opposite of Z                                                                  |
+| editSelectModeClipAction  | Shift+A | Opposite of A                                                                  |
 | editSelectModeCurveAction |    A    | Automation                                                                     |
-| editUndoAction            |    Z    |                                                                                |
+| editUndoAction            |    Z    | Undo                                                                           |
 | fileCloseAction           |    X    | Heavily used binding most often used to close Piano Roll window                |
 | transportBackwardAction   |    B    | Heavily used to navigate back across the timeline to a given marker or head    |
 | transportForwardAction    |    F    | Heavily used to navigate forward across the timeline to a given marker or head |
 | transportPlayAction       |  Space  |                                                                                |
-| viewMenubarAction         | Ctrl+M  | Keep this around just in case the menu bar is accidently closed!               |
+| viewMenubarAction         | Ctrl+M  | Keep this around just in case the Menu Bar is accidently closed!               |
 | viewSnapPerBeat1          |    1    | Quarter note                                                                   |
 | viewSnapPerBeat2          |    2    | 8th note                                                                       |
 | viewSnapPerBeat3          |    3    | 8th note triplet                                                               |
 | viewSnapPerBeat4          |    4    | 16th                                                                           |
 
-Here are the suggested bindings for the MIDI Clip Editor (Piano Roll) window:
+Here are the suggested bindings for the MIDI Clip Editor (Piano Roll) window
 
-| Menu/Action             | Binding | Mnemonic or additional notes                         |
-| :---------------------- | :-----: | :--------------------------------------------------- |
-| editCopyAction          |    C    |                                                      |
-| editDeleteAction        |    D    |                                                      |
-| editModeDrawAction      | Shift+W | Seldom used. Think of it as a "Special write"        |
-| editModeOffAction       |    S    | Select                                               |
-| editModeOnAction        |    W    | Write                                                |
-| editPasteAction         |    V    |                                                      |
-| editSelectAllAction     |    A    |                                                      |
-| editSelectNoneAction    | Shift+A |                                                      |
-| editUndoAction          |    Z    |                                                      |
-| fileCloseAction         |    X    | Heavily used                                         |
-| toolsQuantizeAction     |    Q    |                                                      |
-| toolsTransposeAction    |    T    |                                                      |
-| transportBackwardAction |    B    |                                                      |
-| transportForwardAction  |    F    |                                                      |
-| transportLoopSetAction  |    R    | I may delete this as it probably serves no use here. |
-| transportPlayAction     |  Space  |                                                      |
-| viewEventsAction        |    E    |                                                      |
-| viewMenubarAction       | Ctrl+M  |                                                      |
-| viewSnapPerBeat1        |    1    |                                                      |
-| viewSnapPerBeat2        |    2    |                                                      |
-| viewSnapPerBeat3        |    3    |                                                      |
-| viewSnapPerBeat4        |    4    |                                                      |
-| viewZoomResetAction     | Shift+R | Newly added. I may remap this to R                   |
+| Menu/Action             | Binding | Mnemonic or additional notes                  |
+| :---------------------- | :-----: | :-------------------------------------------- |
+| editCopyAction          |    C    | Copy                                          |
+| editDeleteAction        |    D    | Delete                                        |
+| editModeDrawAction      | Shift+W | Seldom used. Think of it as a "Special write" |
+| editModeOffAction       |    S    | Select                                        |
+| editModeOnAction        |    W    | Write                                         |
+| editPasteAction         |    V    | Paste                                         |
+| editRedoAction          | Shift-Z | Opposite of Z                                 |
+| editSelectAllAction     |    A    | All                                           |
+| editSelectInvertAction  | Shift-S | Think of it as "opposite of what is selected" |
+| editSelectNoneAction    | Shift+A | Opposite of A                                 |
+| editUndoAction          |    Z    | Undo                                          |
+| fileCloseAction         |    X    | Heavily used                                  |
+| toolsQuantizeAction     |    Q    | Quantize                                      |
+| toolsTransposeAction    |    T    | Transpose                                     |
+| transportBackwardAction |    B    | Back                                          |
+| transportForwardAction  |    F    | Forward                                       |
+| transportPlayAction     |  Space  |                                               |
+| viewEventsAction        |    E    | Event Viewer                                  |
+| viewMenubarAction       | Ctrl+M  | Keep this around just in case                 |
+| viewSnapPerBeat1        |    1    | Quarter Note                                  |
+| viewSnapPerBeat2        |    2    | 8th note                                      |
+| viewSnapPerBeat3        |    3    | 8th note triplet                              |
+| viewSnapPerBeat4        |    4    | 16th note                                     |
+| viewZoomResetAction     | Shift+R | Reset zoom                                    |
 
 # The Perfect i3 Configuration
 
