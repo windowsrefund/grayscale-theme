@@ -9,7 +9,7 @@ Qtractor is the creation of Rui Nuno Capela (aka [rnbc](https://www.rncbc.org)).
 
 This theme was inspired by the [incredible work](https://sourceforge.net/projects/visualthemes-qtractor/) of G3N-es.
 
-Free software icons from [iconduck](https://iconduck.com/sets/lightning-design-icons/styles/monotone)
+Free software icons from [iconduck](https://iconduck.com/sets/lightning-design-icons/styles/monotone). Brightness has been reduced -30.
 
 # Features
 
