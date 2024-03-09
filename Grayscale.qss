@@ -1,7 +1,7 @@
 /* QSS format file
 
  * Name: Grayscale.qss
- * Version: 0.3
+ * Version: 0.4
  * Credit: This is just a hack against the original work from Miguel Lacha
  * Description: Clean dullness
  * License: GNU General Public License V.2
@@ -151,16 +151,17 @@ QTabBar::tab:selected {
 
 /* Section: Mixer */
 qtractorMixerRackWidget {
-  background: palette(dark);
+  background: palette(shadow);
 }
 qtractorMixer qtractorMixerStrip:hover {
   background: qlineargradient(x1:0, y1:1, x2:0, y2:0,
-     stop:0 palette(base),
+     stop:0 palette(shadow),
      stop:0.9 #878c6a,
      stop:1 #878c6a
   );
 }
 qtractorMixerStrip QLabel {
+  background: palette(base);
   font-size: 12px;
 }
 qtractorMixerStrip > QWidget > QAbstractSpinBox {
@@ -229,15 +230,26 @@ qtractorMixerStrip > QWidget > QAbstractSpinBox::down-button {
 qtractorMidiEditTime {
   background: palette(dark);
   color: #878c6a;
+  margin-left: 15px;
 }
 qtractorMidiEditList {
   border: none;
-  background: palette(dark);
-  margin: 1px 0;
 }
-qtractorMidiEventList {
-  background: palette(dark);
+qtractorMidiEditView {
+  background: palette(highlight);
+  margin-left: 15px;
 }
+qtractorMidiEditEvent {
+  background: palette(dark);
+  margin-left: 15px;
+}
+
+/* Section: MIDI Event Viewer */
+qtractorMidiEventList > QAbstractItemView {
+  background: palette(dark);
+  alternate-background-color: palette(dark);
+}
+
 /* Section: Plugins Boxes */
 qtractorPluginListView {
   border-radius: 4px;
