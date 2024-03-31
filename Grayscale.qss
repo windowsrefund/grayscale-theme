@@ -230,18 +230,18 @@ qtractorMixerStrip > QWidget > QAbstractSpinBox::down-button {
 qtractorMidiEditTime {
   background: palette(dark);
   color: #878c6a;
-  margin-left: 15px;
+  margin-left: 5px;
 }
 qtractorMidiEditList {
   border: none;
 }
 qtractorMidiEditView {
-  background: palette(highlight);
-  margin-left: 15px;
+  background: palette(dark);
+  margin-left: 5px;
 }
 qtractorMidiEditEvent {
   background: palette(dark);
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 /* Section: MIDI Event Viewer */
