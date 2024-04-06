@@ -1,5 +1,6 @@
 Grayscale
 grayish inspired theme for [Qtractor](https://www.qtractor.org)
+
 ![sequencer](seq.png)
 ![mixer](mix.png)
 
