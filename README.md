@@ -46,7 +46,7 @@ Import the _Grayscale.conf_ file obtained from this repo in order to change the 
 
 Next, import the _Grayscale.qss_ file obtained from this repo in order to change the style sheet.
 
-The suggested colors to set in _View > Options > Display > Meters_ are _#2a7c5b_ for Audio and _#7c2a40_ for MIDI.
+The suggested colors to set in _View > Options > Display > Meters_ are _#75b5aa_ for Audio and _#7c2a40_ for MIDI.
 
 The suggested colors to use when creating tracks are _#252628_ for foreground and _#878C6A_ for background.
 
@@ -54,7 +54,7 @@ The suggested color to use for automation is _#bdbdbd_.
 
 # Toolbar Configuration
 
-In order to reduce clutter, it is highly recommended to disable most toolbars. In the main window, navigate to _View > Toolbars_ and disable the following:
+In order to reduce clutter, it is highly recommended to disable all status bars and most toolbars. In the main window, navigate to _View > Toolbars_ and disable the following:
 
 - File
 - Edit
@@ -68,6 +68,8 @@ In the MIDI clip editor (piano roll), navigate to _View > Toolbars_ and disable 
 - Transport
 - Time
 - Scale
+
+Uncheck _View > Statusbar_ in both windows.
 
 # Key Bindings
 
@@ -109,32 +111,32 @@ Here are the suggested bindings for the main window
 
 Here are the suggested bindings for the MIDI Clip Editor (Piano Roll) window
 
-| Menu/Action             | Binding | Mnemonic or additional notes                  |
-| :---------------------- | :-----: | :-------------------------------------------- |
-| editCopyAction          |    C    | Copy                                          |
-| editDeleteAction        |    D    | Delete                                        |
-| editModeDrawAction      | Shift+W | Seldom used. Think of it as a "Special write" |
-| editModeOffAction       |    S    | Select                                        |
-| editModeOnAction        |    W    | Write                                         |
-| editPasteAction         |    V    | Paste                                         |
-| editRedoAction          | Shift-Z | Opposite of Z                                 |
-| editSelectAllAction     |    A    | All                                           |
-| editSelectInvertAction  | Shift-S | Think of it as "opposite of what is selected" |
-| editSelectNoneAction    | Shift+A | Opposite of A                                 |
-| editUndoAction          |    Z    | Undo                                          |
-| fileCloseAction         |    X    | Heavily used                                  |
-| toolsQuantizeAction     |    Q    | Quantize                                      |
-| toolsTransposeAction    |    T    | Transpose                                     |
-| transportBackwardAction |    B    | Back                                          |
-| transportForwardAction  |    F    | Forward                                       |
-| transportPlayAction     |  Space  |                                               |
-| viewEventsAction        |    E    | Event Viewer                                  |
-| viewMenubarAction       | Ctrl+M  | Keep this around just in case                 |
-| viewSnapPerBeat1        |    1    | Quarter Note                                  |
-| viewSnapPerBeat2        |    2    | 8th note                                      |
-| viewSnapPerBeat3        |    3    | 8th note triplet                              |
-| viewSnapPerBeat4        |    4    | 16th note                                     |
-| viewZoomResetAction     | Shift+R | Reset zoom                                    |
+| Menu/Action             | Binding | Mnemonic or additional notes                      |
+| :---------------------- | :-----: | :------------------------------------------------ |
+| editCopyAction          |    C    | Copy                                              |
+| editDeleteAction        |    D    | Delete                                            |
+| editModeDrawAction      | Shift+W | Seldom used. Think of it as a "Special write"     |
+| editModeOffAction       |    S    | Select                                            |
+| editModeOnAction        |    W    | Write                                             |
+| editPasteAction         |    V    | Paste                                             |
+| editRedoAction          | Shift-Z | Opposite of Z                                     |
+| editSelectAllAction     |    A    | All                                               |
+| editSelectInvertAction  | Shift-S | Think of it as "opposite of selected"             |
+| editSelectNoneAction    | Shift+A | Opposite of A                                     |
+| editUndoAction          |    Z    | Undo                                              |
+| fileCloseAction         |    X    | Heavily used                                      |
+| toolsQuantizeAction     |    Q    | Quantize                                          |
+| toolsTransposeAction    |    T    | Transpose                                         |
+| transportBackwardAction |    B    | Back                                              |
+| transportForwardAction  |    F    | Forward                                           |
+| transportPlayAction     |  Space  |                                                   |
+| viewEventsAction        |    E    | Event Viewer                                      |
+| viewMenubarAction       | Ctrl+M  | Keep this around to reveal the menu bar if needed |
+| viewSnapPerBeat1        |    1    | Quarter Note                                      |
+| viewSnapPerBeat2        |    2    | 8th note                                          |
+| viewSnapPerBeat3        |    3    | 8th note triplet                                  |
+| viewSnapPerBeat4        |    4    | 16th note                                         |
+| viewZoomResetAction     | Shift+R | Reset zoom                                        |
 
 # The Perfect i3 Configuration
 
