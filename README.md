@@ -35,7 +35,7 @@ Given the need to overwrite images, we will compile. This assumes you are runnin
   cp grayscale-theme/images/\*.png qtractor/src/images
   cd qtractor
   cmake -B build
-  cmake --build build
+  cmake --build build -j $(($(nproc) - 1))
   sudo cmake --install build
 ```
 
