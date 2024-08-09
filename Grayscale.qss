@@ -7,10 +7,15 @@
  * License: GNU General Public License V.2
 */
 
+/* Section: Track Buttons */
+qtractorTracks QPushButton:hover {
+  border: none;
+  background: solid palette(highlight);
+}
+
 /* Section: General Hover */
 QPushButton:hover, QToolButton:hover, QComboBox:hover, QTabBar::tab:!selected:hover {
-  border: 1px solid #878c6a;
-  background: solid palette(base);
+  border: 1px solid palette(window-text);
 }
 
 /* Section: General Forms Background */
