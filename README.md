@@ -47,11 +47,11 @@ Import the _Grayscale.conf_ file obtained from this repo in order to change the 
 
 Next, import the _Grayscale.qss_ file obtained from this repo in order to change the style sheet.
 
-The suggested colors to set in _View > Options > Display > Meters_ are _#75b5aa_ for Audio and _#7c2a40_ for MIDI.
+The suggested colors to set in _View > Options > Display > Meters_ are _#75b5aa_ for Audio and _#555555_ for MIDI.
 
 The suggested colors to use when creating tracks are _#252628_ for foreground and _#878C6A_ for background.
 
-The suggested color to use for automation is _#bdbdbd_.
+The suggested color to use for automation is _#75b5aa_.
 
 # Toolbar Configuration
 
