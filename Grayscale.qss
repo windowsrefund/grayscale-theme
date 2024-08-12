@@ -8,6 +8,16 @@
 */
 
 /* Section: Track Buttons */
+qtractorTrackButton,
+qtractorMonitorButton {
+  font-weight: bold;
+  padding: 1px 2px 3px 2px;
+}
+qtractorTrackButton:checked {
+  padding: 2px 2px 2px 2px;
+  color: palette(dark);
+  background: palette(text)
+}
 qtractorTracks QPushButton:hover {
   border: none;
   background: solid palette(highlight);
@@ -159,15 +169,17 @@ qtractorMixerRackWidget {
   background: palette(shadow);
 }
 qtractorMixer qtractorMixerStrip:hover {
-  background: qlineargradient(x1:0, y1:1, x2:0, y2:0,
-     stop:0 palette(shadow),
-     stop:0.9 #878c6a,
-     stop:1 #878c6a
-  );
+  border: 1px ridge #878c6a;
 }
 qtractorMixerStrip QLabel {
   background: palette(base);
+  color: palette(text);
   font-size: 12px;
+}
+qtractorAudioMixerMeter,
+qtractorMidiMixerMeter {
+  max-height: 230px;
+  min-height: 230px;
 }
 qtractorMixerStrip > QWidget > QAbstractSpinBox {
   background: palette(shadow);
