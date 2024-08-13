@@ -149,9 +149,9 @@ In the event you are using i3, here are the bits of my configuration:
 for_window [class="(?i)Qtractor"] floating enable
 
 # Now we override that behavior for only specific windows
-for_window [class="(?i)Qtractor" title="Track [0-9]*\)"] floating disable layout splitv
-for_window [class="(?i)Qtractor" title="Mixer"] floating disable
-for_window [class="(?i)Qtractor" title="Connections"] floating disable layout splith
+for_window [class="(?i)Qtractor" title="Track [0-9]*\)"] floating disable, layout splitv
+for_window [class="(?i)Qtractor" title="Mixer"] floating disable, border none
+for_window [class="(?i)Qtractor" title="Connections"] floating disable, layout splith
 # This is the default startup when not using a template
 for_window [class="(?i)Qtractor" title="Untitled1"] floating disable
 # When we open a saved session
