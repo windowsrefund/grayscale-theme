@@ -164,15 +164,20 @@ QTabBar::tab:selected {
   background: palette(highlight);
 }
 
-/* Section: Mixer */
+/* Mixer */
 qtractorMixerRackWidget {
-  background: palette(shadow);
+  background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+    stop:0 palette(dark),
+    stop:0.5 palette(base),
+    stop:1 palette(dark)
+  );
+  border: none;
 }
 qtractorMixer qtractorMixerStrip:hover {
   border: 1px ridge #878c6a;
 }
 qtractorMixerStrip QLabel {
-  background: palette(base);
+  background: palette(dark);
   color: palette(text);
   font-size: 12px;
 }
