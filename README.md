@@ -23,7 +23,7 @@ Everything in this design is geared toward functionality:
 
 # Installation
 
-Given the need to overwrite images, we will compile. This assumes you are running some Debian-like distro. The following steps have been verified on Ubuntu 23.10:
+Given the need to overwrite images, we will compile. This assumes you are running some Debian-like distro. The following steps have been verified on Ubuntu 24.04:
 
 ```
   sudo apt-get build-dep qtractor
