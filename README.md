@@ -23,7 +23,7 @@ Everything in this design is geared toward functionality:
 
 # Installation
 
-Given the need to overwrite images, we will compile. This assumes you are running some Debian-like distro. The following steps have been verified on Ubuntu 24.04:
+Given the need to overwrite images and patch a particular section of the source code, we will compile. This assumes you are running some Debian-like distro. The following steps have been verified on Ubuntu 24.04:
 
 ```
   sudo apt-get build-dep qtractor
@@ -32,8 +32,10 @@ Given the need to overwrite images, we will compile. This assumes you are runnin
   cd src
   git clone https://github.com/windowsrefund/grayscale-theme.git
   git clone --recursive https://github.com/rncbc/qtractor.git
-  cp grayscale-theme/images/\*.png qtractor/src/images
   cd qtractor
+  git checkout -b grayscale-theme
+  git apply -v ../grayscale-theme/patches/01-mixer-highlight.patch
+  cp -R ../grayscale-theme/images/*.png src/images
   cmake -B build
   cmake --build build -j $(($(nproc) - 1))
   sudo cmake --install build

@@ -1,0 +1,33 @@
+From e053c784c6de4f348ecb9da41634872d2fe98bf4 Mon Sep 17 00:00:00 2001
+From: windowsrefund <mtf8>
+Date: Wed, 14 Aug 2024 23:16:13 -0400
+Subject: [PATCH] track highlight patch for grayscale-theme
+
+---
+ src/qtractorMixer.cpp | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/qtractorMixer.cpp b/src/qtractorMixer.cpp
+index 3b473d943..1780e97ed 100644
+--- a/src/qtractorMixer.cpp
++++ b/src/qtractorMixer.cpp
+@@ -770,13 +770,13 @@ void qtractorMixerStrip::setSelected ( bool bSelected )
+ 	QPalette pal;
+ 	QColor rgbBase;
+ 	if (m_bSelected) {
+-		rgbBase = pal.midlight().color();
++		rgbBase = pal.highlight().color();
+ 		pal.setColor(QPalette::WindowText,
+ 			pal.highlightedText().color());
+ 		pal.setColor(QPalette::Window,
+-			rgbBase.darker(150));
++			rgbBase.darker(120));
+ 	} else {
+-		rgbBase	= pal.window().color();
++		rgbBase	= pal.shadow().color();
+ 		pal.setColor(QPalette::WindowText,
+ 			pal.windowText().color());
+ 		pal.setColor(QPalette::Window,
+-- 
+2.43.0
+
