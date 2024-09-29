@@ -49,7 +49,7 @@ Import the _Grayscale.conf_ file obtained from this repo in order to change the 
 
 Next, import the _Grayscale.qss_ file obtained from this repo in order to change the style sheet.
 
-The suggested colors to set in _View > Options > Display > Meters_ are _#75b5aa_ for Audio and _#555555_ for MIDI.
+The suggested colors to set in _View > Options > Display > Meters_ are _#75b5aa_ for Audio and _#878C6A_ for MIDI.
 
 The suggested colors to use when creating tracks are _#252628_ for foreground and _#878C6A_ for background.
 
@@ -111,6 +111,7 @@ Here are the suggested bindings for the main window
 | viewSnapPerBeat2          |    2    | 8th note                                                                       |
 | viewSnapPerBeat3          |    3    | 8th note triplet                                                               |
 | viewSnapPerBeat4          |    4    | 16th                                                                           |
+| viewWindowsConnections    | Shift-C | Open the Connections panel                                                     |
 
 Here are the suggested bindings for the MIDI Clip Editor (Piano Roll) window
 
@@ -150,18 +151,18 @@ In the event you are using i3, here are the bits of my configuration:
 # first, we set everything to float
 for_window [class="(?i)Qtractor"] floating enable
 
-# Now we override that behavior for only specific windows
+# Now we override for specific windows
 for_window [class="(?i)Qtractor" title="Track [0-9]*\)"] floating disable, layout splitv
 for_window [class="(?i)Qtractor" title="Mixer"] floating disable, border none
 for_window [class="(?i)Qtractor" title="Connections"] floating disable, layout splith
 # This is the default startup when not using a template
 for_window [class="(?i)Qtractor" title="Untitled1"] floating disable
 # When we open a saved session
-for_window [class="(?i)Qtractor" title="\.qtr"] floating disable
+for_window [class="(?i)Qtractor" title="\.qt[a-z]"] floating disable
 
-# DAW on the left, mixer on the right
-assign [class="(?i)Qtractor" title="Mixer"] $ws4
+# DAW on the left and Mixer on the right
 assign [class="(?i)Qtractor"] $ws3
+assign [class="(?i)Qtractor" title="Mixer"] $ws4
 ```
 
 # Extras

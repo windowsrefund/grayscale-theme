@@ -1,17 +1,17 @@
-From e053c784c6de4f348ecb9da41634872d2fe98bf4 Mon Sep 17 00:00:00 2001
+From 99bc9f556a9a6c17788b84ee731e9d8c8c5a4f8a Mon Sep 17 00:00:00 2001
 From: windowsrefund <mtf8>
-Date: Wed, 14 Aug 2024 23:16:13 -0400
-Subject: [PATCH] track highlight patch for grayscale-theme
+Date: Sun, 29 Sep 2024 11:17:10 -0400
+Subject: [PATCH] patch mixer strip coloring
 
 ---
- src/qtractorMixer.cpp | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
+ src/qtractorMixer.cpp | 12 ++++--------
+ 1 file changed, 4 insertions(+), 8 deletions(-)
 
 diff --git a/src/qtractorMixer.cpp b/src/qtractorMixer.cpp
-index 3b473d943..1780e97ed 100644
+index 862affed..50168dbd 100644
 --- a/src/qtractorMixer.cpp
 +++ b/src/qtractorMixer.cpp
-@@ -770,13 +770,13 @@ void qtractorMixerStrip::setSelected ( bool bSelected )
+@@ -770,25 +770,21 @@ void qtractorMixerStrip::setSelected ( bool bSelected )
  	QPalette pal;
  	QColor rgbBase;
  	if (m_bSelected) {
@@ -19,15 +19,28 @@ index 3b473d943..1780e97ed 100644
 +		rgbBase = pal.highlight().color();
  		pal.setColor(QPalette::WindowText,
  			pal.highlightedText().color());
- 		pal.setColor(QPalette::Window,
+-		pal.setColor(QPalette::Window,
 -			rgbBase.darker(150));
-+			rgbBase.darker(120));
  	} else {
--		rgbBase	= pal.window().color();
-+		rgbBase	= pal.shadow().color();
+ 		rgbBase	= pal.window().color();
  		pal.setColor(QPalette::WindowText,
  			pal.windowText().color());
- 		pal.setColor(QPalette::Window,
+-		pal.setColor(QPalette::Window,
+-			rgbBase);
+ 	}
+ #ifdef CONFIG_GRADIENT
+ 	const QSize& hint = QFrame::sizeHint();
+ 	QLinearGradient grad(0, 0, hint.width() >> 1, hint.height());
+ 	if (m_bSelected) {
+-		grad.setColorAt(0.4, rgbBase.darker(150));
+-		grad.setColorAt(0.6, rgbBase.darker(130));
+-		grad.setColorAt(1.0, rgbBase.darker());
++		grad.setColorAt(0.4, rgbBase);
++		grad.setColorAt(0.6, rgbBase.lighter(105));
++		grad.setColorAt(1.0, rgbBase);
+ 	} else {
+ 		grad.setColorAt(0.4, rgbBase);
+ 		grad.setColorAt(0.6, rgbBase.lighter(105));
 -- 
-2.43.0
+2.46.2
 
