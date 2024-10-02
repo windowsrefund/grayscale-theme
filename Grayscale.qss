@@ -1,31 +1,38 @@
 /* QSS format file
 
  * Name: Grayscale.qss
- * Version: 0.4
+ * Version: 0.5
  * Credit: This is just a hack against the original work from Miguel Lacha
  * Description: Clean dullness
  * License: GNU General Public License V.2
 */
 
-/* Section: Track Buttons */
+/* Buttons 
+Shoutout to G3N-es!
+*/
+#transportToolbar QToolButton,
+#optionsToolbar QToolButton,
+qtractorMidiEditorForm #viewToolbar QToolButton,
 qtractorTrackButton,
 qtractorMonitorButton {
   font-weight: bold;
   padding: 1px 2px 3px 2px;
 }
-qtractorTrackButton:checked, qtractorCurveButton:checked {
-  padding: 2px 2px 2px 2px;
-  color: palette(dark);
-  background: palette(text)
-}
-qtractorTracks QPushButton:hover {
+#transportToolbar QToolButton:hover,
+#optionsToolbar QToolButton:hover,
+qtractorMidiEditorForm #viewToolbar QToolButton:hover,
+qtractorTrackButton:hover,
+qtractorMonitorButton:hover {
   border: none;
   background: solid palette(highlight);
 }
-
-/* Section: General Hover */
-QPushButton:hover, QToolButton:hover, QComboBox:hover, QTabBar::tab:!selected:hover {
-  border: 1px solid palette(window-text);
+#transportToolbar QToolButton:checked,
+#optionsToolbar QToolButton:checked,
+qtractorMidiEditorForm #viewToolbar QToolButton:checked,
+qtractorTrackButton:checked,
+qtractorMonitorButton:checked {
+  color: #eeeeee;
+  background: solid palette(highlight);
 }
 
 /* Section: General Forms Background */
