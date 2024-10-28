@@ -35,8 +35,8 @@ index 862affed..50168dbd 100644
 -		grad.setColorAt(0.4, rgbBase.darker(150));
 -		grad.setColorAt(0.6, rgbBase.darker(130));
 -		grad.setColorAt(1.0, rgbBase.darker());
-+		grad.setColorAt(0.4, rgbBase);
-+		grad.setColorAt(0.6, rgbBase.lighter(105));
++		grad.setColorAt(0.4, rgbBase.lighter(115));
++		grad.setColorAt(0.6, rgbBase.lighter(115));
 +		grad.setColorAt(1.0, rgbBase);
  	} else {
  		grad.setColorAt(0.4, rgbBase);
