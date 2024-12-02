@@ -35,11 +35,14 @@ Given the need to overwrite images and patch a particular section of the source 
   cd qtractor
   git checkout -b grayscale-theme
   git apply -v ../grayscale-theme/patches/01-mixer-highlight.patch
-  cp -R ../grayscale-theme/images/*.png src/images
   cmake -B build
   cmake --build build -j $(($(nproc) - 1))
   sudo cmake --install build
 ```
+
+# Custom icons
+
+If you wish to use the icons provided by this theme, start Qtractor and navigate to _View > Options > Display_. Under _Custom > Icons theme_, select the _images_ directory provided by this repo. That said, it is important to understand not all icons have been provided. Those I consider to be redundant and/or overkill have basically just be provided as transparent images. As issues or the need arises, additional icons may be converted in the future.
 
 # Additional Color Setup
 
