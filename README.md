@@ -38,7 +38,7 @@ a poor design was used which now essentially adds a dependency on a visual compo
 
 ```
   git clone --recursive https://github.com/windowsrefund/qtractor-not-broken.git
-  cd qtractor
+  cd qtractor-not-broken
   git checkout -b grayscale-theme
   git apply -v ../grayscale-theme/patches/01-mixer-highlight.patch
   cmake -B build
