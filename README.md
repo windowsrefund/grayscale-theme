@@ -23,7 +23,7 @@ Everything in this design is geared toward functionality:
 
 # Installation
 
-Given the need to overwrite images and patch a particular section of the source code, we will compile. This assumes you are running some Debian-like distro. The following steps have been verified on Ubuntu 24.04:
+This assumes you are running some Debian-like distro. The following steps have been verified on Ubuntu 24.04:
 
 ```
   sudo apt-get build-dep qtractor
@@ -31,7 +31,13 @@ Given the need to overwrite images and patch a particular section of the source 
   mkdir src
   cd src
   git clone https://github.com/windowsrefund/grayscale-theme.git
-  git clone --recursive https://github.com/rncbc/qtractor.git
+```
+
+As a result of [this](https://github.com/rncbc/qtractor/commit/c52e1075b704d83a5a475f062cda56c851604b71) and [this](https://github.com/rncbc/qtractor/commit/d5b57455a09982d889b0bde5603d9f37add8451f), Qtractor's UX now assumes users will always consult an icon within a "optional" toolbar in order to know what Edit Mode the cursor is in. This came about due to a well-intentioned feature request to consolidate the `Edit on` and `Edit Off` keybindings down to a single toggle. Unfortunately, the feature was rushed and 
+a poor design was used which now essentially adds a dependency on a visual component in order to know what mode is active. We're not interested in bloated toolbars with redundant icons so this theme will sacrifice the toggle feature by compiling from a fork. At the end of the day, having the ability to drive the Edit Mode in a predictable fashion via the keyboard is worth more than a toggle which forces us to constantly look away from our work in order to consult an icon. 
+
+```
+  git clone --recursive https://github.com/windowsrefund/qtractor-not-broken.git
   cd qtractor
   git checkout -b grayscale-theme
   git apply -v ../grayscale-theme/patches/01-mixer-highlight.patch
@@ -40,34 +46,16 @@ Given the need to overwrite images and patch a particular section of the source 
   sudo cmake --install build
 ```
 
-# Custom icons
-
-If you wish to use the icons provided by this theme, start Qtractor and navigate to _View > Options > Display_. Under _Custom > Icons theme_, select the _images_ directory provided by this repo. That said, it is important to understand not all icons have been provided. Those I consider to be redundant and/or overkill have basically just be provided as transparent images. As issues or the need arises, additional icons may be converted in the future.
-
-# Additional Color Setup
-
-With Qtractor running, navigate to _View > Options > Display_.
-
-Import the _Grayscale.conf_ file obtained from this repo in order to change the color theme.
-
-Next, import the _Grayscale.qss_ file obtained from this repo in order to change the style sheet.
-
-The suggested colors to set in _View > Options > Display > Meters_ are _#75b5aa_ for Audio and _#878C6A_ for MIDI.
-
-The suggested colors to use when creating tracks are _#252628_ for foreground and _#878C6A_ for background.
-
-The suggested color to use for automation is _#75b5aa_.
-
 # Toolbar Configuration
 
-In order to reduce clutter, it is highly recommended to disable all status bars and most toolbars. In the main window, navigate to _View > Toolbars_ and disable the following:
+In order to reduce clutter, disable all status bars and most toolbars. In the main window, navigate to _View > Toolbars_ and disable the following:
 
 - File
 - Edit
 - Track
 - View
 
-In the MIDI clip editor (piano roll), navigate to _View > Toolbars_ and disable the following:
+In the MIDI Editor (piano roll), navigate to _View > Toolbars_ and disable the following:
 
 - File
 - Edit
@@ -76,6 +64,22 @@ In the MIDI clip editor (piano roll), navigate to _View > Toolbars_ and disable 
 - Scale
 
 Uncheck _View > Statusbar_ in both windows.
+
+# Custom Icons
+
+Under _View > Options > Display_. Under _Custom > Icons theme_, select the _images_ directory provided by this repo. Even though this theme advocates hiding specific toolbars (and by proxy, their icons), many pointless icons are still rendered alongside the menu items. For this reason, all bloated and pointless icons have been clobbered via transparent images. If you need to see these icons, this theme is probably not going to work for you. As needs arise, additional icons may be unmasked in the future.
+
+# Additional Color Setup
+
+Under _View > Options > Display_, import the _Grayscale.conf_ file obtained from this repo in order to change the color theme.
+
+Next, import the _Grayscale.qss_ file obtained from this repo in order to change the style sheet.
+
+The suggested colors to set in _View > Options > Display > Meters_ are _#75b5aa_ for Audio and _#878C6A_ for MIDI.
+
+The suggested colors to use when creating tracks are _#252628_ for foreground and _#878C6A_ for background.
+
+The suggested color to use for automation is _#75b5aa_.
 
 # Key Bindings
 
@@ -116,7 +120,7 @@ Here are the suggested bindings for the main window
 | viewSnapPerBeat4          |    4    | 16th                                                                           |
 | viewWindowsConnections    | Shift-C | Open the Connections panel                                                     |
 
-Here are the suggested bindings for the MIDI Clip Editor (Piano Roll) window
+Here are the suggested bindings for the MIDI Editor (Piano Roll) window
 
 | Menu/Action             | Binding | Mnemonic or additional notes                      |
 | :---------------------- | :-----: | :------------------------------------------------ |
