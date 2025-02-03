@@ -165,6 +165,7 @@ Here are the suggested bindings for the main window
 | :------------------------ | :-----: | :----------------------------------------------------------------------------- |
 | clipLoopSetAction         |    R    | Repeat                                                                         |
 | clipMergeAction           |    G    | Group                                                                          |
+| clipMuteAction            |    Q    | Quiet (clip)                                                                   |
 | clipSplitAction           |    S    | Split                                                                          |
 | clipUnlinkAction          |    T    | Tear (not really but I just thought of it)                                     |
 | editCopyAction            |    C    | Copy                                                                           |
