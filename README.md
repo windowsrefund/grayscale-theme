@@ -44,7 +44,8 @@ Everything in this design is geared toward functionality:
 ## Installation
 
 This assumes you are running some Debian-like distro. The following steps have
-been verified on Ubuntu 24.04:
+been verified on Ubuntu 24.04. Notice we will apply a small patch to the
+Qtractor mixer before compiling. 
 
 ```sh
   sudo apt-get build-dep qtractor
@@ -52,27 +53,8 @@ been verified on Ubuntu 24.04:
   mkdir src
   cd src
   git clone https://github.com/windowsrefund/grayscale-theme.git
-```
-
-As a result of
-[this](https://github.com/rncbc/qtractor/commit/c52e1075b704d83a5a475f062cda56c851604b71)
-and
-[this](https://github.com/rncbc/qtractor/commit/d5b57455a09982d889b0bde5603d9f37add8451f),
-Qtractor's UX now assumes users will always consult an icon within a "optional"
-toolbar in order to know what Edit Mode the cursor is in. This came about due to
-a well-intentioned feature request to consolidate the `Edit on` and `Edit Off`
-keybindings down to a single toggle. Unfortunately, the feature was rushed and a
-poor design was used which now essentially adds a dependency on a visual
-component in order to know what mode is active. We're not interested in bloated
-toolbars with redundant icons so this theme will sacrifice the toggle feature by
-compiling from a fork. At the end of the day, having the ability to drive the
-Edit Mode in a predictable fashion via the keyboard is worth more than a toggle
-which forces us to constantly look away from our work in order to consult an
-icon.
-
-```sh
-  git clone --recursive https://github.com/windowsrefund/qtractor-not-broken.git
-  cd qtractor-not-broken
+  git clone --recursive https://github.com/rncbc/qtractor.git
+  cd qtractor
   git checkout -b grayscale-theme
   git apply -v ../grayscale-theme/patches/01-mixer-highlight.patch
   cmake -B build
@@ -194,8 +176,9 @@ Here are the suggested bindings for the MIDI Editor (Piano Roll) window
 | editCopyAction          |    C    | Copy                                              |
 | editDeleteAction        |    D    | Delete                                            |
 | editModeDrawAction      | Shift+W | Seldom used. Think of it as a "Special write"     |
-| editModeOffAction       |    S    | Select                                            |
-| editModeOnAction        |    W    | Write                                             |
+| editModeOffAction       |    S    | Select/Write Toggle                               |
+| editModeOnAction        |    W    | Write/Select Toggle                               |
+| editModeDrawAction      | Shift-D | Draw                                              |
 | editPasteAction         |    V    | Paste                                             |
 | editRedoAction          | Shift-Z | Opposite of Z                                     |
 | editSelectAllAction     |    A    | All                                               |
