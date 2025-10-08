@@ -26,9 +26,8 @@ This theme was inspired by the
 [incredible work](https://sourceforge.net/projects/visualthemes-qtractor/) of
 G3N-es.
 
-Free software icons from
-[iconduck](https://iconduck.com/sets/lightning-design-icons/styles/monotone).
-Brightness has been reduced -30.
+Free software icons from [remixicon](https://remixicon.com) with color set to
+#E1E1E1.
 
 ## Features
 
@@ -45,7 +44,7 @@ Everything in this design is geared toward functionality:
 
 This assumes you are running some Debian-like distro. The following steps have
 been verified on Ubuntu 24.04. Notice we will apply a small patch to the
-Qtractor mixer before compiling. 
+Qtractor mixer before compiling.
 
 ```sh
   sudo apt-get build-dep qtractor
@@ -72,11 +71,15 @@ main window, navigate to _View > Toolbars_ and disable the following:
 - Track
 - View
 
+Now, drag the _Options_ toolbar down so it sits to the right of the _Snaps/beat_
+pull-down menu.
+
 In the MIDI Editor (piano roll), navigate to _View > Toolbars_ and disable the
 following:
 
 - File
 - Edit
+- View
 - Transport
 - Time
 - Scale
@@ -143,7 +146,7 @@ words, only bind what you intend to actually use.
 
 Here are the suggested bindings for the main window
 
-| Menu/Action               | Binding | Mnemonic or additional notes                                                   |
+| menu/action               | binding | mnemonic or additional notes                                                   |
 | :------------------------ | :-----: | :----------------------------------------------------------------------------- |
 | clipLoopSetAction         |    R    | Repeat                                                                         |
 | clipMergeAction           |    G    | Group                                                                          |
@@ -154,8 +157,8 @@ Here are the suggested bindings for the main window
 | editDeleteAction          |    D    | Delete                                                                         |
 | editPasteAction           |    V    | Paste                                                                          |
 | editRedoAction            | Shift-Z | Opposite of Z                                                                  |
-| editSelectModeClipAction  | Shift+A | Opposite of A                                                                  |
-| editSelectModeCurveAction |    A    | Automation                                                                     |
+| editSelectModeCurveAction |    A    | Automation (toggle)                                                            |
+| editTrackHeightMinimize   |    E    | Toggle track size from minimal and default                                     |
 | editUndoAction            |    Z    | Undo                                                                           |
 | fileCloseAction           |    X    | Heavily used binding most often used to close Piano Roll window                |
 | transportBackwardAction   |    B    | Heavily used to navigate back across the timeline to a given marker or head    |
@@ -168,6 +171,7 @@ Here are the suggested bindings for the main window
 | viewSnapPerBeat3          |    3    | 8th note triplet                                                               |
 | viewSnapPerBeat4          |    4    | 16th                                                                           |
 | viewWindowsConnections    | Shift-C | Open the Connections panel                                                     |
+| viewWindowsMixer          | Shift-M | Open the Mixer                                                                 |
 
 Here are the suggested bindings for the MIDI Editor (Piano Roll) window
 
